@@ -48,7 +48,7 @@ const Categorys: React.FC = () => {
         {categories.map((category, index) => (
             <div
             key={index}
-            className={`border-2 border-[#EB5353]/10 hover:border-white bg-[#EB5353] duration-300 ease-linear w-full rounded-xl mx-auto mt-2 group`}
+            className={`border-2 shadow-sm shadow-[#EB5353] border-[#EB5353]/10 hover:border-white bg-[#EB5353] duration-300 ease-linear w-full rounded-xl mx-auto mt-2 group`}
             >
             <div className="flex flex-col gap-5 mb-6">
                 <div className="mx-auto text-[10rem] duration-300 ease-linear opacity-70 group-hover:opacity-100">
