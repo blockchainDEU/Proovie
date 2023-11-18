@@ -1,5 +1,9 @@
 import React from 'react';
 import { FaGamepad } from 'react-icons/fa';
+import { IoTicket } from "react-icons/io5";
+import { MdOutlineSubscriptions } from "react-icons/md";
+import { GiBookmark } from "react-icons/gi";
+import { TbCategoryFilled } from "react-icons/tb";
 
 type Category = {
   title: string;
@@ -14,23 +18,19 @@ const categories: Category[] = [
     icon: <FaGamepad />,
   },
   {
-    title: 'Games',
-    description: 'Sell and Play...',
-    icon: <FaGamepad />,
+    title: 'Tickets',
+    description: 'Sell and Enjoy...',
+    icon: <IoTicket />,
   },
   {
-    title: 'Games',
-    description: 'Sell and Play...',
-    icon: <FaGamepad />,
+    title: 'Subscriptions',
+    description: 'Sell and Enjoy More...',
+    icon: <MdOutlineSubscriptions />,
   },
   {
-    title: 'Games',
-    description: 'Sell and Play...',
-    icon: <FaGamepad />,
-  },  {
-    title: 'Games',
-    description: 'Sell and Play...',
-    icon: <FaGamepad />,
+    title: 'Educations',
+    description: 'Sell and Learn...',
+    icon: <GiBookmark />,
   },
 
 ];
@@ -40,7 +40,7 @@ const Categorys: React.FC = () => {
     <div>
         <div className=" flex max-w-max rounded-lg mt-5 bg-[#EB5353]">
             <nav className=" flex text-xl items-center gap-4 text-white px-5 py-2 my-auto ">
-            <FaGamepad className=""/>
+            <TbCategoryFilled />
             <nav>Categories</nav>
             </nav>
         </div>
@@ -51,7 +51,7 @@ const Categorys: React.FC = () => {
             className={`border-2 shadow-sm shadow-[#EB5353] border-[#EB5353]/10 hover:border-white bg-[#EB5353] duration-300 ease-linear w-full rounded-xl mx-auto mt-2 group`}
             >
             <div className="flex flex-col gap-5 mb-6">
-                <div className="mx-auto text-[10rem] duration-300 ease-linear opacity-70 group-hover:opacity-100">
+                <div className="mx-auto text-[9rem] duration-300 ease-linear opacity-60 group-hover:opacity-100">
                 {category.icon}
                 </div>
                 <div className="ml-8 flex gap-4">
