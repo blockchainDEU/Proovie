@@ -38,6 +38,7 @@ import { ethers } from 'ethers';
     const EASSCAN_URI = 'https://sepolia.easscan.org'
     const { address } = useAccount();
     const [signer,setSigner] = useState()
+    const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null);
     // const signer : any = useSigner();
     async function signOffchainAttestation(
       offchainData: OffchainAttest
@@ -183,8 +184,9 @@ import { ethers } from 'ethers';
     };
   
 
-    const openModal = () => {
+    const openModal = (index: number) => {
       setIsOpen(true);
+      setSelectedItemIndex(index);
     };
 
     const closeModal = () => {
@@ -225,9 +227,9 @@ import { ethers } from 'ethers';
   </div>
         <div className=' flex gap-6 '>
             <div className=' grid grid-cols-6 grid-rows-2 gap-5 cursor-pointer' >
-                {nftData.map((nft) => (
+                {nftData.map((nft, index) => (
                   <div className=' flex flex-col justify-center'>
-                    <div className='group relative block overflow-hidden rounded-lg' onClick={openModal}>
+                    <div className='group relative block overflow-hidden rounded-lg' onClick={() => openModal(index)}>
                         <img
                             src={nft.itemImage}
                             alt="Image"
@@ -250,7 +252,7 @@ import { ethers } from 'ethers';
                           <div className="fixed inset-0 z-50 overflow-auto bg-black/25 backdrop-blur-sm flex justify-center items-center">
                             <div className="bg-white w-full rounded-3xl min-w-[60vw] max-w-[1460px] min-h-[80vh] border border-[#EB5353] mx-6 p-6 pb-8 text-center text-white ">
                               <div className="flex items-center justify-center flex-col mb-2 relative">
-                                <span onClick={closeModal} className="absolute top-0 right-0 p-2 cursor-pointer
+                                <span  onClick={() => closeModal()} className="absolute top-0 right-0 p-2 cursor-pointer
                                   rounded-full bg-[#EB5353] hover:bg-[#EB5353]/60"> 
                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -261,7 +263,7 @@ import { ethers } from 'ethers';
                               <div className='flex flex-row gap-2'>
                                 <div className=' w-[30%] flex flex-col h-full gap-2'>
                                   <img
-                                      src={nft.itemImage}
+                                      src={nftData[selectedItemIndex]?.itemImage}
                                       alt="Image"
                                       className=" object-cover shadow-sm shadow-[#EB5353] transition duration-500 group-hover:scale-105 h-[25rem] rounded-lg "
                                     />
