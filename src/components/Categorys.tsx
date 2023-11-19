@@ -44,14 +44,14 @@ const Categorys: React.FC = () => {
             <nav>Categories</nav>
             </nav>
         </div>
-        <div className=" grid-cols-5 grid-rows-1 gap-2 grid justify-center items-center">
+        <div className=" grid-cols-4 grid-rows-1 gap-2 grid justify-center items-center">
         {categories.map((category, index) => (
             <div
             key={index}
             className={`border-2 shadow-sm shadow-[#EB5353] border-[#EB5353]/10 hover:border-white bg-[#EB5353] duration-300 ease-linear w-full rounded-xl mx-auto mt-2 group`}
             >
             <div className="flex flex-col gap-5 mb-6">
-                <div className="mx-auto text-[9rem] duration-300 ease-linear opacity-60 group-hover:opacity-100">
+                <div className="mx-auto text-[9rem] py-[2rem] duration-300 ease-linear opacity-60 group-hover:opacity-100">
                 {category.icon}
                 </div>
                 <div className="ml-8 flex gap-4">

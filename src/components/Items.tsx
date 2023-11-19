@@ -226,25 +226,25 @@ import { ethers } from 'ethers';
     </div>
   </div>
         <div className=' flex gap-6 '>
-            <div className=' grid grid-cols-6 grid-rows-2 gap-5 cursor-pointer' >
+            <div className=' grid grid-cols-5 grid-rows-2 gap-5 cursor-pointer' >
                 {nftData.map((nft, index) => (
                   <div className=' flex flex-col justify-center'>
-                    <div className='group relative block overflow-hidden rounded-lg' onClick={() => openModal(index)}>
+                    <div className='group overflow-hidden rounded-lg ' onClick={() => openModal(index)}>
                         <img
                             src={nft.itemImage}
                             alt="Image"
                             className="h-64 w-full object-cover transition duration-500 group-hover:scale-105  sm:h-72"
                         />
 
-                        <div className="relative border border-[#EB5353] bg-white p-6">
+                        <div className="flex flex-col border border-[#EB5353] min-h-[12rem] bg-white p-6">
                             <span
-                            className=" whitespace-nowrap mx-auto bg-[#EB5353] text-white  text-main px-3 py-1.5  font-mono"
+                            className=" whitespace-nowrap bg-[#EB5353] text-white  text-main px-3 py-1.5  font-mono"
                             >
                             {nft.sellOffers[0].offerPrice || '0'} USDT
                             </span>
 
                             <p className="mt-4 text-[#EB5353] text-lg font-medium ">{nft.name}</p>
-                            <p className='text-[#EB5353]/50 text-end'>Click For Details...</p>
+                            <p className='text-[#EB5353]/50 mt-auto text-end'>Click For Details...</p>
 
                         </div>
                     </div>
@@ -269,14 +269,20 @@ import { ethers } from 'ethers';
                                     />
                                   <div className=' h-1/2 flex flex-row gap-2 text-black font-semibold'>
                                     <div className='border-red-500 rounded-lg bg-red-500/10  border-2 w-1/2 py-2 '>
-                                        {/* {nft.map( index) => (
-                                          <div key={index}>{nft.sellOffers.offerPrice || ''} USDT</div>
-                                        ))} */}
+                                        <p>10 USDT</p>
+                                        <p>34 USDT</p>
+                                        <p>38 USDT</p>
+                                        <p>40 USDT</p>
+                                        <p>52 USDT</p>
+                                        <p>64 USDT</p>
                                     </div>
                                     <div className='border-green-500 rounded-lg bg-green-500/10 border-2 w-1/2 py-2'>
-                                        {/* {nft.map( index) => (
-                                          <div key={index}>{nft.sellOffers.offerPrice || ''} USDT</div>
-                                        ))} */}
+                                        <p>20 USDT</p>
+                                        <p>24 USDT</p>
+                                        <p>28 USDT</p>
+                                        <p>30 USDT</p>
+                                        <p>32 USDT</p>
+                                        <p>34 USDT</p>
                                     </div>
                                   </div>
                                 </div>

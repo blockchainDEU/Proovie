@@ -10,9 +10,11 @@ const Header = () => {
         <nav className="2xl:container 2xl:mx-auto sm:py-2 sm:px-3 py-2 px-1">
           <div className="flex justify-between ">
             <Link href={'/'} className="">
-                <div className=" text-[#EB5353] font-mono font-bold text-3xl italic">
-                   Proovie 
-                </div>
+                <img
+                  src="/logo.png"
+                  className=" max-w-[10rem]"
+                
+                />
             </Link>
             <div className=' my-auto '>
                 <w3m-button/>
