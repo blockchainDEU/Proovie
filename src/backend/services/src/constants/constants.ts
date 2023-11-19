@@ -14,6 +14,5 @@ export const SCHEMA_STRUCT: string =
 export const SCHEMA_REGISTRY: string = DEVELOPER_MODE
   ? process.env.EAS_SCHEMA_REGISTRY_SEPHOLIA!
   : '0x0a7E2Ff54e76B8E6659aedc9103FB21c038050D0';
-export const PRIVATE_KEY = 'ebd43fcb6c9b837b9ff3f2ed5424884227c90de923a4820aa3f56230cfcc9681';
 export const EASSCAN_URI: string =
   process.env.EASSCAN_URI || 'https://sepolia.easscan.org';
