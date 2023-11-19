@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors'
 import { getAttestationDataFromEASID } from './solver';
+const MEV_BLOCKER_RPC:string = 'https://rpc.mevblocker.io';
 import {
     AttestationDataParams,
     CreateOffer,
